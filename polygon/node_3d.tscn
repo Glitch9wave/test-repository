@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3j2qy742l67"]
+
+[ext_resource type="Texture2D" uid="uid://7i55r7p4m2m0" path="res://icon.svg" id="1_pqs0w"]
+[ext_resource type="Script" path="res://king.gd" id="2_pea8w"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xtrtn"]
+radius = 1.29393
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p3mah"]
+size = Vector3(1.23267, 1.2991, 0.155029)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.907777, 0.419452, 0, -0.419452, 0.907777, -0.195797, 3.36283, 6.35602)
+fov = 108.987
+near = 0.082
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.223425, 1.06796, -1.6211)
+script = ExtResource("2_pea8w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.407084, 0)
+shape = SubResource("SphereShape3D_xtrtn")
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96433, 0)
+texture = ExtResource("1_pqs0w")
+
+[node name="CharacterBody3D2" type="CharacterBody3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, -10, 0, 10, -4.37114e-07, -0.103378, 0.123991, -9.94399)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111084, 0.928981, 0.0704032)
+shape = SubResource("BoxShape3D_p3mah")
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96433, 0)
+texture = ExtResource("1_pqs0w")
