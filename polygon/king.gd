@@ -32,3 +32,8 @@ func _process(delta: float) -> void:
 	
 	# Применяем движение
 	move_and_slide()
+	
+	# Этот комментарий предназначается для ветки second 
+	
+	
+	
