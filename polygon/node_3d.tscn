@@ -25,7 +25,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.407084, 0)
 shape = SubResource("SphereShape3D_xtrtn")
 
 [node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96433, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96433, 2.37776)
 texture = ExtResource("1_pqs0w")
 
 [node name="CharacterBody3D2" type="CharacterBody3D" parent="."]
